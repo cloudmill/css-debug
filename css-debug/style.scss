@@ -1,0 +1,66 @@
+.css-debug {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 10px;
+  opacity: 0.2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #000;
+  z-index: 99999;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+}
+
+.css-debug-one-child {
+  div > div:first-child:last-child,
+  div:has(> div:first-child:last-child) {
+    border: 0.5px solid red;
+    padding: 1px;
+  }
+}
+
+.css-debug-border-all {
+  * {
+    border: 1px solid red;
+  }
+}
+
+// .css-debug-gylis {
+//   :root {
+//     background-color: green;
+//   }
+
+//   :root div {
+//     background-color: rgba(255 0 0 / 1%) !important;
+//   }
+
+//   :root * {
+//     background-color: rgb(0 0 0 / 0%) !important;
+//   }
+// }
+
+.css-debug-inline {
+  *[style] {
+    background-color: red;
+  }
+}
